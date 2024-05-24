@@ -1,0 +1,102 @@
+version: "3.1"
+
+stories:
+
+- story: Greet and Explore Historical Places
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen
+
+- story: Explore Historical Place Opening Hours
+  steps:
+  - intent: query_opening_hours
+  - action: action_retrieve_opening_hours
+  - action: utter_query_opening_hours
+  - action: action_listen
+
+- story: Explore Historical Place Entrance Fee
+  steps:
+  - intent: query_entrance_fee
+  - action: action_retrieve_entrance_fee
+  - action: utter_query_entrance_fee
+  - action: action_listen
+
+- story: Explore Historical Place Accessibility
+  steps:
+  - intent: query_accessibility
+  - action: action_retrieve_accessibility
+  - action: utter_query_accessibility
+  - action: action_listen
+
+- story: Explore Historical Place Historical Context
+  steps:
+  - intent: query_historical_context
+  - action: action_retrieve_historical_context
+  - action: utter_query_historical_context
+  - action: action_listen
+
+- story: Explore Historical Place Architecture Features
+  steps:
+  - intent: query_architecture_features
+  - action: action_retrieve_architecture_features
+  - action: utter_query_architecture_features
+  - action: action_listen
+
+- story: Explore Historical Place Local Culture and Customs
+  steps:
+  - intent: query_local_culture_customs
+  - action: action_retrieve_local_culture_customs
+  - action: utter_query_local_culture_customs
+  - action: action_listen
+
+- story: Explore Historical Place Visitor Tips and Recommendations
+  steps:
+  - intent: query_visitor_tips_recommendations
+  - action: action_retrieve_visitor_tips_recommendations
+  - action: utter_query_visitor_tips_recommendations
+  - action: action_listen
+
+- story: Explore Nearby Attractions
+  steps:
+  - intent: query_nearby_attractions
+  - action: action_retrieve_nearby_attractions
+  - action: utter_query_nearby_attractions
+  - action: action_listen
+
+- story: Explore General Information about a Place
+  steps:
+  - intent: query_general_information
+  - action: action_retrieve_general_information
+  - action: utter_query_general_information
+  - action: action_listen
+
+- story: Explore Specific Historical Place
+  steps:
+  - intent: query_specific_place
+  - action: action_retrieve_specific_place_info
+  - action: utter_query_specific_place
+  - action: action_listen
+
+- story: Say Thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+  - action: action_listen
+
+- story: Say Goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_listen
+
+- story: Handle Bot Challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+  - action: action_listen
+
+- story: Handle Default Response
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

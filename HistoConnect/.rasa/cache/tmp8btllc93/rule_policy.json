@@ -1,0 +1,27 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_location\"}}]": "action_retrieve_location",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_location\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_location\"}, \"user\": {\"intent\": \"ask_location\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_default_fallback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_opening_hours\"}}]": "action_retrieve_opening_hours",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_opening_hours\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_opening_hours\"}, \"user\": {\"intent\": \"ask_opening_hours\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_facilities\"}}]": "action_retrieve_facilities",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_facilities\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_facilities\"}, \"user\": {\"intent\": \"ask_facilities\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_historical_facts\"}}]": "action_retrieve_historical_facts",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_historical_facts\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_historical_facts\"}, \"user\": {\"intent\": \"ask_historical_facts\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"general_info\"}}]": "action_retrieve_general_place_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"general_info\"}}, {\"prev_action\": {\"action_name\": \"action_retrieve_general_place_info\"}, \"user\": {\"intent\": \"general_info\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent back",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

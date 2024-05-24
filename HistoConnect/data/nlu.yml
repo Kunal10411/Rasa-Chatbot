@@ -1,0 +1,255 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good eveningw
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - good afternoon
+    - howdy
+    - yo
+    - greetings
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - take care
+    - gotta go
+    - catch you later
+    - until next time
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+    - yup
+    - sure
+    - absolutely
+    - you got it
+    - affirmative
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - nah
+    - no thanks
+    - definitely not
+    - I refuse
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you an AI?
+    - are you a real person?
+    - are you artificial intelligence?
+    - are you a virtual assistant?
+
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks
+    - Thanks a lot
+    - Appreciate it
+    - Thank you so much
+    - Thanks for the help
+    - Cheers
+    - Much appreciated
+    - I'm grateful
+
+- intent: query_opening_hours
+  examples: |
+    - What are the opening hours of [Victoria Memorial](place)?
+    - When is [Taj Mahal](place) open?
+    - Tell me the operating hours of [Charminar](place)
+    - What time can I visit [Mysore Palace](place)?
+    - Opening hours for [India Gate](place)?
+    - When can I visit [Qutub Minar](place)?
+    - [Gol Gumbaz](place) timings?
+    - Hours of operation for [Jantar Mantar](place)?
+    - Can you tell me when [Nalanda University](place) is open?
+    - When does [Gateway of India](place) close?
+    - What are [Victoria Memorial](place)'s hours?
+    - I need to know the open and close timings of [Taj Mahal](place)
+    - Do you have info on [Charminar](place) opening times?
+    - [Mysore Palace](place) business hours?
+    - Give me [India Gate](place)'s operating schedule
+    - [Qutub Minar](place) hours please
+    - What are the visitor timings for [Gol Gumbaz](place)?
+
+- intent: query_entrance_fee
+  examples: |
+    - What is the entrance fee for [Victoria Memorial](place)?
+    - How much does it cost to enter [Taj Mahal](place)?
+    - Tell me the ticket price for [Charminar](place)
+    - What is the admission fee for [Mysore Palace](place)?
+    - Entrance fee for [India Gate](place)?
+    - How expensive is it to visit [Qutub Minar](place)?
+    - [Gol Gumbaz](place) entry fee?
+    - Ticket rates for [Jantar Mantar](place)?
+    - Can you tell me the fee for [Nalanda University](place)?
+    - How much do tickets to [Gateway of India](place) cost?
+    - Entry prices for [Victoria Memorial](place)?
+    - What are the [Taj Mahal](place) ticket costs?
+    - [Charminar](place) admission charges?
+    - How much is entry to [Mysore Palace](place)?
+    - Ticket fare for [India Gate](place)
+    - [Qutub Minar](place) entry fees please
+    - What do I need to pay to get into [Gol Gumbaz](place)?
+
+- intent: query_historical_context
+  examples: |
+    - Can you tell me about the history of [Taj Mahal](place)?
+    - What is the historical significance of [Qutub Minar](place)?
+    - Tell me more about the background of [Gol Gumbaz](place).
+    - Who built [Jantar Mantar](place) and why?
+    - What are the important events associated with [Nalanda University](place)?
+    - Can you tell me about the history of [Victoria Memorial](place)?
+    - What is the historical significance of [Charminar](place)?
+    - Tell me more about the background of [Hampi](place).
+    - Who built [Mysore Palace](place) and why?
+    - What are the important events associated with [India Gate](place)?
+    - Give me some historical context on [Taj Mahal](place)
+    - I'd like to know the story behind [Qutub Minar](place)
+    - [Gol Gumbaz](place)'s origins and past
+    - The history and purpose of [Jantar Mantar](place)
+    - Important happenings related to [Nalanda University](place)
+
+- intent: query_architecture_features
+  examples: |
+    - Describe the architecture of [India Gate](place).
+    - What are the notable features of [Taj Mahal](place)?
+    - Can you tell me about the design of [Qutub Minar](place)?
+    - What makes the architecture of [Gol Gumbaz](place) unique?
+    - Are there any special structures within [Jantar Mantar](place)?
+    - Describe the architecture of [Victoria Memorial](place).
+    - What are the notable features of [Charminar](place)?
+    - Can you tell me about the design of [Hampi](place)?
+    - What makes the architecture of [Mysore Palace](place) unique?
+    - Are there any special structures within [Nalanda University](place)?
+    - Architectural details of [India Gate](place)
+    - Highlight the key designs of [Taj Mahal](place)
+    - I need info on [Qutub Minar](place)'s construction
+    - What's special about how [Gol Gumbaz](place) was built?
+    - Distinctive structures at [Jantar Mantar](place)
+
+- intent: query_local_culture_customs
+  examples: |
+    - What cultural practices are observed at [Gol Gumbaz](place)?
+    - Are there any traditional customs associated with [Jantar Mantar](place)?
+    - Can you recommend any local foods to try near [Nalanda University](place)?
+    - What cultural events or festivals are celebrated at [Victoria Memorial](place)?
+    - Tell me about the local culture around [Charminar](place).
+    - What cultural practices are observed at [Hampi](place)?
+    - Are there any traditional customs associated with [Mysore Palace](place)?
+    - Can you recommend any local foods to try near [India Gate](place)?
+    - What cultural events or festivals are celebrated at [Taj Mahal](place)?
+    - Tell me about the local culture around [Qutub Minar](place).
+    - Traditions and rituals at [Gol Gumbaz](place)
+    - Local cuisines one must try around [Nalanda University](place)
+    - Famous festivals or celebrations at [Victoria Memorial](place)  
+    - Indigenous customs and practices near [Charminar](place)
+    - Regional delicacies popular around [Mysore Palace](place)
+
+- intent: query_visitor_tips_recommendations
+  examples: |
+    - Any tips for visiting [Mysore Palace](place)?
+    - Can you suggest some recommendations for my visit to [India Gate](place)?
+    - What should I know before visiting [Taj Mahal](place)?
+    - Do you have any insider tips for exploring [Qutub Minar](place)?
+    - Where are the best photo spots at [Hampi](place)?
+    - Any tips for visiting [Victoria Memorial](place)?
+    - Can you suggest some recommendations for my visit to [Charminar](place)?
+    - What should I know before visiting [Gol Gumbaz](place)?
+    - Do you have any insider tips for exploring [Jantar Mantar](place)?
+    - Where are the best photo spots at [Nalanda University](place)?
+    - Advice for first-time visitors to [Mysore Palace](place)
+    - Recommendations to make the most of my [India Gate](place) trip
+    - Insider guidance for [Taj Mahal](place) visit
+    - Tips for photographing [Qutub Minar](place)
+    - Best vantage points to capture [Hampi](place)
+
+- intent: query_nearby_attractions
+  examples: |
+    - What other attractions are near [Charminar](place)?
+    - Can you recommend other places to visit around [Victoria Memorial](place)?
+    - Are there any nearby landmarks or points of interest near [Hampi](place)?
+    - What else can I see or do in the area near [Mysore Palace](place)?
+    - Any recommendations for things to do nearby [India Gate](place)?
+    - What other attractions are near [Taj Mahal](place)?
+    - Can you recommend other places to visit around [Qutub Minar](place)?
+    - Are there any nearby landmarks or points of interest near [Gol Gumbaz](place)?
+    - What else can I see or do in the area near [Jantar Mantar](place)?
+    - Any recommendations for things to do nearby [Nalanda University](place)?
+    - Other must-see sights close to [Charminar](place)
+    - Nearby places of interest around [Victoria Memorial](place)
+    - Landmarks to check out in the vicinity of [Hampi](place)
+    - Additional attractions around [Mysore Palace](place) area
+    - Things to do walking distance from [India Gate](place)
+
+- intent: query_general_information
+  examples: |
+    - How can I get to [Nalanda University](place) from my current location?
+    - Where is the nearest parking to [Gol Gumbaz](place)?
+    - Are there any special events happening at [Jantar Mantar](place)?
+    - Can you provide directions to [Charminar](place)?
+    - What is the best way to reach [Victoria Memorial](place)?
+    - How can I get to [Taj Mahal](place) from my current location?
+    - Where is the nearest parking to [Qutub Minar](place)?
+    - Are there any special events happening at [Hampi](place)?
+    - Can you provide directions to [Mysore Palace](place)?
+    - What is the best way to reach [India Gate](place)?
+    - Directions from my location to [Nalanda University](place)
+    - Parking options close to [Gol Gumbaz](place)
+    - Upcoming special exhibitions or shows at [Jantar Mantar](place)
+    - How to get to [Charminar](place) by public transport
+    - Best route to access [Victoria Memorial](place)
+
+- intent: query_specific_place
+  examples: |
+    - Can you provide information about [Hampi](place)?
+    - Tell me about [Gol Gumbaz](place).
+    - I want to know more about [Jantar Mantar](place).
+    - Provide details about [Nalanda University](place).
+    - Information on [Charminar](place), please.
+    - Can you provide information about [Mysore Palace](place)?
+    - Tell me about [India Gate](place).
+    - I want to know more about [Taj Mahal](place).
+    - Provide details about [Qutub Minar](place).
+    - Information on [Victoria Memorial](place), please.
+    - Give me an overview of [Hampi](place)
+    - Describe [Gol Gumbaz](place) to me
+    - What can you share about [Jantar Mantar](place)?
+    - I need some background on [Nalanda University](place)
+    - Tell me what makes [Charminar](place) special

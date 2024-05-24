@@ -1,0 +1,215 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - thanks
+  - query_opening_hours
+  - query_entrance_fee
+  - query_accessibility
+  - query_historical_context
+  - query_architecture_features
+  - query_local_culture_customs
+  - query_visitor_tips_recommendations
+  - query_nearby_attractions
+  - query_general_information
+  - query_specific_place
+
+
+entities:
+  - place
+  - opening_hours
+  - entrance_fee
+  - historical_context
+  - architecture_features
+  - local_culture_customs
+  - visitor_tips_recommendations
+  - nearby_attractions
+  - directions
+  - parking_location
+  - special_events_info
+  - specific_place_info
+
+responses:
+  utter_greet:
+    - text: "Hey! How can I assist you today?"
+    - text: "Hello! Welcome to our historical places exploration chatbot. How can I help you?"
+    - text: "Hi there! What historical place are you interested in learning more about?"
+    - text: "Greetings! I'm an AI assistant ready to share information about popular historical sites."
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+    - text: "See you later!"
+    - text: "Farewell! Come back anytime!"
+    - text: "Take care! Looking forward to assisting you again soon."
+
+  utter_affirm:
+    - text: "Great! Let me know if there's anything else I can help you with."
+    - text: "Perfect! If you have any more questions, feel free to ask."
+    - text: "Awesome! Feel free to reach out if you need further assistance."
+    - text: "Wonderful! I'm here to provide more information whenever you need it."
+
+  utter_deny:
+    - text: "Okay, no problem. Let me know if you change your mind."
+    - text: "Understood. If you have any questions later on, don't hesitate to ask."
+    - text: "No worries. If you need assistance in the future, feel free to come back."
+    - text: "No problem at all. I'll be here if you need me later."
+
+  utter_bot_challenge:
+    - text: "Yes, I'm a bot designed to assist you with information about historical places in India."
+    - text: "Correct, you're talking to a bot! How can I help you today?"
+    - text: "Yes, I'm an AI-powered chatbot. Feel free to ask me anything!"
+    - text: "You got it! I'm an artificial intelligence assistant here to provide details about Indian historical sites."
+
+  utter_thanks:
+    - text: "You're welcome! If you have any more questions, feel free to ask."
+    - text: "No problem! Let me know if there's anything else I can assist you with."
+    - text: "Glad I could help! If you need further assistance, just let me know."
+    - text: "It's my pleasure! Don't hesitate to reach out if you need anything else."
+
+  utter_query_opening_hours:
+    - text: "The opening hours of {location} are {opening_hours}."
+    - text: "You can visit {location} from {opening_hours}."
+    - text: "{location} is open to visitors during {opening_hours}."
+
+  utter_query_entrance_fee:
+    - text: "The entrance fee for {location} is {entrance_fee}."
+    - text: "You need to pay {entrance_fee} to enter {location}."
+    - text: "The ticket price for {location} is {entrance_fee}."
+    - text: "The admission fee to visit {location} is {entrance_fee}."
+
+  utter_query_accessibility:
+    - text: "Yes, {location} is wheelchair accessible."
+    - text: "There are facilities for visitors with disabilities at {location}."
+    - text: "Accessibility features are available at {location}."
+    - text: "{location} has accommodations for people with special needs or disabilities."
+
+  utter_query_historical_context:
+    - text: "Sure! {historical_context}"
+    - text: "The history of {location} dates back to {historical_context}."
+    - text: "Let me tell you about the historical context of {location}."
+    - text: "The story behind {location} is quite fascinating. {historical_context}"
+
+  utter_query_architecture_features:
+    - text: "The architecture of {location} is known for its {architecture_features}."
+    - text: "{location} is renowned for its architectural features such as {architecture_features}."
+    - text: "The design of {location} incorporates {architecture_features}."
+    - text: "Architecturally, {location} boasts {architecture_features}, which make it truly unique."
+
+  utter_query_local_culture_customs:
+    - text: "At {location}, you can experience the local culture through {local_culture_customs}."
+    - text: "{location} is rich in cultural traditions like {local_culture_customs}."
+    - text: "Don't miss out on the cultural practices at {location}, including {local_culture_customs}."
+    - text: "If you're interested in local customs, be sure to explore {local_culture_customs} during your visit to {location}."
+
+  utter_query_visitor_tips_recommendations:
+    - text: "For your visit to {location}, I recommend {visitor_tips_recommendations}."
+    - text: "Here are some tips for exploring {location}: {visitor_tips_recommendations}."
+    - text: "To make the most of your visit to {location}, consider {visitor_tips_recommendations}."
+    - text: "My top recommendations for visiting {location} would be {visitor_tips_recommendations}."
+
+  utter_query_nearby_attractions:
+    - text: "Other attractions near {location} include {nearby_attractions}."
+    - text: "If you're exploring {location}, be sure to check out nearby landmarks like {nearby_attractions}."
+    - text: "In the vicinity of {location}, you'll find attractions such as {nearby_attractions}."
+    - text: "While you're at {location}, consider visiting these nearby sites as well: {nearby_attractions}."
+
+  utter_query_general_information:
+    - text: "To get to {location} from your current location, you can {directions}."
+    - text: "The nearest parking to {location} is located {parking_location}."
+    - text: "For any special events happening at {location}, you can {special_events_info}."
+    - text: "Regarding general information about {location}, {directions} to get there, {parking_location} for parking, and {special_events_info} for any upcoming events."
+
+  utter_query_specific_place:
+    - text: "Certainly! Here's some information about {location}: {specific_place_info}"
+    - text: "Let me provide you with details about {location}: {specific_place_info}"
+    - text: "You're interested in {location}? Here's what you need to know: {specific_place_info}"
+    - text: "{location} is a fascinating place. {specific_place_info}"
+
+  utter_default:
+    - text: "I'm sorry, I didn't understand that. Could you please rephrase your question?"
+    - text: "Apologies, I couldn't understand your query. Can you please provide more details?"
+    - text: "I'm not sure I understand. Could you please clarify what you're asking?"
+    - text: "I'm afraid I didn't catch that. Could you rephrase your request?"
+
+slots:
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: place
+  opening_hours:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: opening_hours
+  entrance_fee:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: entrance_fee
+  historical_context:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: historical_context
+  architecture_features:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: architecture_features
+  local_culture_customs:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: local_culture_customs
+  visitor_tips_recommendations:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: visitor_tips_recommendations
+  nearby_attractions:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nearby_attractions
+  directions:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: directions
+  parking_location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: parking_location
+  special_events_info:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: special_events_info
+  specific_place_info:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: specific_place_info
+
+actions:
+  - action_retrieve_opening_hours
+  - action_retrieve_entrance_fee
+  - action_retrieve_accessibility
+  - action_retrieve_historical_context
+  - action_retrieve_architecture_features
+  - action_retrieve_local_culture_customs
+  - action_retrieve_visitor_tips_recommendations
+  - action_retrieve_nearby_attractions
+  - action_retrieve_general_information
+  - action_retrieve_specific_place_info
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,107 @@
+version: "3.0"
+
+rules:
+  - rule: Handle greetings
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Handle goodbyes
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Affirmation
+    steps:
+      - intent: affirm
+      - action: utter_affirm
+
+  - rule: Denial
+    steps:
+      - intent: deny
+      - action: utter_deny
+
+  - rule: Bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_bot_challenge
+
+  - rule: Expressing thanks
+    steps:
+      - intent: thanks
+      - action: utter_thanks
+
+  - rule: Query opening hours
+    steps:
+      - intent: query_opening_hours
+      - action: action_retrieve_opening_hours
+      - action: utter_query_opening_hours
+      - action: action_listen
+
+  - rule: Query entrance fee
+    steps:
+      - intent: query_entrance_fee
+      - action: action_retrieve_entrance_fee
+      - action: utter_query_entrance_fee
+      - action: action_listen
+
+  - rule: Query accessibility
+    steps:
+      - intent: query_accessibility
+      - action: action_retrieve_accessibility
+      - action: utter_query_accessibility
+      - action: action_listen
+
+  - rule: Query historical context
+    steps:
+      - intent: query_historical_context
+      - action: action_retrieve_historical_context
+      - action: utter_query_historical_context
+      - action: action_listen
+
+  - rule: Query architecture features
+    steps:
+      - intent: query_architecture_features
+      - action: action_retrieve_architecture_features
+      - action: utter_query_architecture_features
+      - action: action_listen
+
+  - rule: Query local culture customs
+    steps:
+      - intent: query_local_culture_customs
+      - action: action_retrieve_local_culture_customs
+      - action: utter_query_local_culture_customs
+      - action: action_listen
+
+  - rule: Query visitor tips and recommendations
+    steps:
+      - intent: query_visitor_tips_recommendations
+      - action: action_retrieve_visitor_tips_recommendations
+      - action: utter_query_visitor_tips_recommendations
+      - action: action_listen
+
+  - rule: Query nearby attractions
+    steps:
+      - intent: query_nearby_attractions
+      - action: action_retrieve_nearby_attractions
+      - action: utter_query_nearby_attractions
+      - action: action_listen
+
+  - rule: Query general information
+    steps:
+      - intent: query_general_information
+      - action: action_retrieve_general_information
+      - action: utter_query_general_information
+      - action: action_listen
+
+  - rule: Query specific place
+    steps:
+      - intent: query_specific_place
+      - action: action_retrieve_specific_place_info
+      - action: utter_query_specific_place
+      - action: action_listen
+
+  - rule: Handle Default Response
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default
